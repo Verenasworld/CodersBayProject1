@@ -23,35 +23,66 @@ body {
     text-decoration: none;
 }
 
-#mylogo{
+#mylogo {
     transition: ease-in-out;
 }
-#mylogo:hover{
+
+#mylogo:hover {
     transform: rotate(-180deg);
 }
+
 .nav li {
     display: inline-block;
 }
 
-.nav li a{
+.nav li a {
     cursor: pointer;
     color: black;
     text-decoration: none;
     margin: 0 3rem;
     padding: 1rem;
 }
-.nav li a:hover{
-    background: rgba(0,0,0,0.2);
+
+.nav li a:hover {
+    background: rgba(0, 0, 0, 0.2);
     color: white;
     padding: 1rem;
 }
-.burger-line{
-    width: 20px;
-    height: 3px;
-    color: white;
+
+.nav-burger {
+    display: none;
+}
+
+.burger-line {
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin-bottom: 5px;
 
 }
 
 .container {
     position: relative;
+}
+
+@media all and (max-width: 900px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .nav-burger {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .nav li{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+        display: none;
+    }
+    .active{
+    display: block;
+    }
 }
