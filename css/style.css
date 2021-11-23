@@ -1,28 +1,57 @@
-*{
-    margin: 0;
+* {
+    margin: 2px;
     padding: 0;
     box-sizing: border-box;
 
 }
 
-body{
+body {
     font-family: Roboto, sans-serif;
     font-size: 1.5rem;
     background-image: radial-gradient(#ececec, #8ed7d3, #50abc9, #35778c);
     min-height: 100vh;
 }
 
-li{
+.header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav {
     text-transform: uppercase;
-    font-family: "Roboto Thin";
     text-decoration: none;
 }
 
-a{
+#mylogo{
+    transition: ease-in-out;
+}
+#mylogo:hover{
+    transform: rotate(-180deg);
+}
+.nav li {
+    display: inline-block;
+}
+
+.nav li a{
     cursor: pointer;
     color: black;
     text-decoration: none;
+    margin: 0 3rem;
+    padding: 1rem;
 }
-.container{
+.nav li a:hover{
+    background: rgba(0,0,0,0.2);
+    color: white;
+    padding: 1rem;
+}
+.burger-line{
+    width: 20px;
+    height: 3px;
+    color: white;
+
+}
+
+.container {
     position: relative;
 }
