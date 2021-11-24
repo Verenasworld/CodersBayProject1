@@ -8,40 +8,94 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div class="header">
-    <img src="../assets/vslogo2.gif" alt="logo" width="50px" height="50px">
-    <ul>
-        <li><a href="home">Home</a></li>
-        <li><a href="about">About</a></li>
-        <li><a href="galery.html">gallery</a></li>
-        <li><a href="contact">Contact</a></li>
-
+<nav class="header">
+    <img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px">
+    <ul class="nav" id="navlist">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="galery.html">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-
-  <div class="container">
-      <img src="" alt="">
-      <h1>This is a cool Page</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequatur distinctio ducimus molestiae, numquam pariatur possimus temporibus. Autem deleniti hic illum, laboriosam, nulla odit quaerat quis saepe sapiente vitae voluptate? </p>
-      <i>instragram</i>
-      <i>facebook</i>
-      <i>github</i>
-      <i>linkedIn</i>
-  </div>
-    <div class="footer">
-        <ul>
-            <li>dsgvo</li>
-            <li>impressum</li>
-            <li>copyright</li>
-        </ul>
-
-        <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>gallery</li>
-            <li>contact</li>
-        </ul>
+    <div class="nav-burger" id="toggle">
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
+        <div class="burger-line"></div>
     </div>
+</nav>
+<div class="container1">
+    <div class="content">
+        <img id="vsart" src="../assets/Vs-Art.jpg" alt="women-drawing">
+        <h1><span>Hi</span>,there that's me!</h1>
+        <h2><em>#lustig #sozial #sportlich #creative</em></h2>
+
+        <div class="sozialmedia">
+            <img src="../assets/github.png" alt="github Logo"> <img src="../assets/github.png" alt="github Logo"> <img
+                src="../assets/github.png" alt="github Logo">
+        </div>
+        <p>Diese Webseite ist im Zuge der Ausbildung zur Software Entwicklung enstanden. Meine Aufgabe bestand darin
+            eine eigene Webseite mit <strong>HTML CSS</strong> und <strong>JS</strong> umzusetzen.Ich hoffe Sie gefällt euch und freu mich auf Dein Feedback </p>
+        <button type="button">Email senden</button>
+    </div>
+
+</div>
+
+
+<div class="skills">
+    <section class="webdesign">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="webdesign">
+        <h2>Webdesign</h2>
+        <button type="button">Webdesign projecte</button>
+    </section>
+
+    <section class="wordpress">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="wordpress">
+        <h2>Wordpress</h2>
+        <button type="button">Wordpress Projecte</button>
+    </section>
+
+    <section class="paintin">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="drawing">
+        <h2>Digital drawing</h2>
+        <button type="button">hier zur gallerie</button>
+    </section>
+</div>
+
+<div class="skills">
+    <section class="webdev">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="webdesign">
+        <h2>Web Development</h2>
+        <button type="button"> Github</button>
+    </section>
+
+    <section class="sport">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="wordpress">
+        <h2>Sport</h2>
+        <button type="button">Mein Hobby</button>
+    </section>
+
+    <section class="creative">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="drawing">
+        <h2>Creative</h2>
+        <button type="button">More from me</button>
+    </section>
+</div>
+<div class="contact">
+    <input type="text" placeholder="email">
+    <input type="text" placeholder="name">
+    <button> send email</button>
+</div>
+
+<div class="footer">
+    <p>&copy VSArt</p>
 </div>
 
 </body>
+<script>
+    const toggleButton = document.getElementById('toggle');
+    const navlist = document.getElementById('navlist');
+
+    toggleButton.addEventListener('click', () => {
+       navlist.classList.toggle('active')
+    })
+</script>
 </html>
