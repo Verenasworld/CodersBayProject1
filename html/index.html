@@ -10,7 +10,7 @@
 <body>
 <div class="header">
     <img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px">
-    <ul class="nav">
+    <ul class="nav" id="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="galery.html">Gallery</a></li>
@@ -79,7 +79,11 @@
         <button type="button">More from me</button>
     </section>
 </div>
-
+<div class="contact">
+    <input type="text" placeholder="email">
+    <input type="text" placeholder="name">
+    <button> send email</button>
+</div>
 
 <div class="footer">
     <p>&copy VSArt</p>
@@ -89,5 +93,10 @@
 <script>
     // https://www.youtube.com/watch?v=mh36Kts-wX8
     const toggleButton = document.getElementById("toggle");
+    const navilist = document.getElementById("navlist");
+
+    toggle.addEventListener('click', ()=> {
+       navilist.classList.toggle('active')
+    })
 </script>
 </html>
