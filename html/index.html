@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div class="header">
+<nav class="header">
     <img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px">
     <ul class="nav" id="navlist">
         <li><a href="#home">Home</a></li>
@@ -21,7 +21,7 @@
         <div class="burger-line"></div>
         <div class="burger-line"></div>
     </div>
-</div>
+</nav>
 <div class="container1">
     <div class="content">
         <img id="vsart" src="../assets/Vs-Art.jpg" alt="women-drawing">
@@ -91,12 +91,11 @@
 
 </body>
 <script>
-    // https://www.youtube.com/watch?v=mh36Kts-wX8
-    const toggleButton = document.getElementById("toggle");
-    const navilist = document.getElementById("navlist");
+    const toggleButton = document.getElementById('toggle');
+    const navlist = document.getElementById('navlist');
 
-    toggle.addEventListener('click', ()=> {
-       navilist.classList.toggle('active')
+    toggleButton.addEventListener('click', () => {
+       navlist.classList.toggle('active')
     })
 </script>
 </html>

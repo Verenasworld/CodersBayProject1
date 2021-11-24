@@ -71,6 +71,8 @@ button:hover {
 
 .nav-burger {
     display: none;
+    cursor: pointer
+;
 }
 
 .burger-line {
@@ -198,14 +200,14 @@ input{
         top: 20px;
     }
 
-    .nav li {
+    .nav {
         width: 100%;
         text-align: center;
         padding: 5px;
         display: none;
     }
 
-    .active {
+   .active {
         display: block;
     }
 
