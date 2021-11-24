@@ -9,7 +9,7 @@
 </head>
 <body>
 <nav class="header">
-    <img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px">
+    <a href="../html/index.html"><img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px"></a>
     <ul class="nav" id="navlist">
         <li><a href="#home">Home</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -22,66 +22,80 @@
         <div class="burger-line"></div>
     </div>
 </nav>
-<div class="container1">
-    <div class="content">
+
+<div class="container1" id="home">
+    <div class="content" >
         <img id="vsart" src="../assets/Vs-Art.jpg" alt="women-drawing">
         <h1><span>Hi</span>,there that's me!</h1>
         <h2><em>#lustig #sozial #sportlich #creative</em></h2>
 
         <div class="sozialmedia">
-            <img src="../assets/github.png" alt="github Logo"> <img src="../assets/github.png" alt="github Logo"> <img
-                src="../assets/github.png" alt="github Logo">
+            <a href="https://github.com/Verenasworld" target="_blank"><img src="../assets/github.png" alt="github Logo"> </a>
         </div>
+
         <p>Diese Webseite ist im Zuge der Ausbildung zur Software Entwicklung enstanden. Meine Aufgabe bestand darin
             eine eigene Webseite mit <strong>HTML CSS</strong> und <strong>JS</strong> umzusetzen.Ich hoffe Sie gefällt euch und freu mich auf Dein Feedback </p>
-        <button type="button">Email senden</button>
+        <button id="fancybutton" onclick="fancy()" type="button">Email senden</button>
     </div>
-
 </div>
 
-
-<div class="skills">
+<div class="skills" id="skills">
     <section class="webdesign">
-        <img src="../assets/laptop-g3e40af446_1280.png" alt="webdesign">
+        <img src="../assets/laptop-g3e40af446_1280.png" alt="">
         <h2>Webdesign</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
         <button type="button">Webdesign projecte</button>
     </section>
 
     <section class="wordpress">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="wordpress">
         <h2>Wordpress</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
+
         <button type="button">Wordpress Projecte</button>
     </section>
 
     <section class="paintin">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="drawing">
         <h2>Digital drawing</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
+
         <button type="button">hier zur gallerie</button>
     </section>
 </div>
-
 <div class="skills">
     <section class="webdev">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="webdesign">
         <h2>Web Development</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
+
         <button type="button"> Github</button>
     </section>
 
     <section class="sport">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="wordpress">
         <h2>Sport</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
+
         <button type="button">Mein Hobby</button>
     </section>
 
     <section class="creative">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="drawing">
         <h2>Creative</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi incidunt, sint. Aut cumque debitis exercitationem.</p>
+
         <button type="button">More from me</button>
     </section>
 </div>
-<div class="contact">
+
+<div id="contact" class="contact">
+    <h2>Ich freu mich auf Deine Nachricht</h2>
     <input type="text" placeholder="email">
     <input type="text" placeholder="name">
+    <div>
+        <textarea name="" id="nachricht" placeholder="Deine Nachricht an mich!"></textarea>
+    </div>
     <button> send email</button>
 </div>
 
@@ -90,12 +104,7 @@
 </div>
 
 </body>
-<script>
-    const toggleButton = document.getElementById('toggle');
-    const navlist = document.getElementById('navlist');
-
-    toggleButton.addEventListener('click', () => {
-       navlist.classList.toggle('active')
-    })
-</script>
+<!--//from inline css to externes file to apply function on galerypage-->
+<script type="text/javascript" src="../main.script.js"></script>
 </html>
+

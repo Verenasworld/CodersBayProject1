@@ -1,8 +1,6 @@
 * {
     margin: 2px;
     padding: 0;
-    box-sizing: border-box;
-
 }
 
 /*basic style*/
@@ -14,6 +12,21 @@ body {
     margin: 0 20px;
 }
 
+button {
+    border: none;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px 25px;
+    border-radius: 25px;
+}
+
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+
+}
+
+/*navigation*/
 .header {
     display: flex;
     justify-content: space-around;
@@ -24,27 +37,13 @@ body {
     z-index: 1;
 }
 
-button {
-    border: none;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 15px 25px;
-}
-
-button:hover {
-    background-color: rgba(255, 255, 255, 0.9);
-
-}
-
-/*navigation*/
-
 .nav {
     text-transform: uppercase;
     text-decoration: none;
 }
 
 #mylogo {
-    transition: 1s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
 #mylogo:hover {
@@ -71,8 +70,8 @@ button:hover {
 
 .nav-burger {
     display: none;
-    cursor: pointer
-;
+    cursor: pointer;
+
 }
 
 .burger-line {
@@ -82,12 +81,13 @@ button:hover {
     margin-bottom: 5px;
 }
 
+/*erster container mit Text und Bild*/
 .container1 {
     position: relative;
     display: flex;
+    animation: fadein 5s;
 }
 
-/*content*/
 .container1 .content {
     display: flex;
     flex-direction: column;
@@ -118,14 +118,26 @@ button:hover {
     font-size: 20px;
 }
 
+/*Bild style*/
 
 #vsart {
     width: 300px;
     height: 300px;
     border-radius: 250px;
-
+    border: 20px solid rgba(255,255,255,0.4);
+    animation: fadein 5s;
 }
 
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/*socialmedia*/
 
 .sozialmedia img {
     width: 40px;
@@ -138,11 +150,13 @@ button:hover {
     transform: scale(1.1);
 }
 
+/*Interessen , skills */
+
 .skills {
     display: flex;
     justify-content: flex-start;
     padding-top: 100px;
-    padding-bottom: 50px;
+
 
 }
 
@@ -167,18 +181,37 @@ button:hover {
     transform: scale(0.9);
 }
 
-.contact{
-    height: 200px;
-}
-input{
-    width: 100%;
-    resize: vertical;
+.skills h2 {
+    margin-top: 20px;
+    font-family: "Open Sans";
+    color: #35778c;
 }
 
+.skills p {
+    padding: 20px 50px;
+}
+.contact {
+    margin: 50px 200px;
+}
+
+input{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.4);
+}
+
+textarea{
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(255,255,255,0.4);
+
+}
 
 .footer {
     height: 40px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
 
 }
 
@@ -187,6 +220,8 @@ input{
     text-align: center;
     padding-top: 10px;
 }
+
+/*responsive , für mobile und tablet - navigation und layout*/
 
 @media all and (max-width: 1000px) {
     .header {
@@ -203,12 +238,29 @@ input{
     .nav {
         width: 100%;
         text-align: center;
-        padding: 5px;
+        padding: 10px;
         display: none;
+        font-size: 40px;
+
     }
 
-   .active {
+    .nav li {
         display: block;
+        margin: 60px 0;
+    }
+
+    .active {
+        display: block;
+        position: absolute;
+        top: 100px;
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(5px);
+        height: 500px;
+
+    }
+
+    .container1 .content p {
+        width: 100%;
     }
 
     .skills {
@@ -216,11 +268,16 @@ input{
         justify-content: center;
     }
 
-    .container1 .content p {
-        width: 100%;
-    }
-    .skills img{
+    .skills img {
         max-width: 100%;
         height: auto;
+    }
+
+    .skills p {
+        padding: 20px 50px;
+    }
+
+    .skills button {
+        margin-bottom: 50px;
     }
 }
