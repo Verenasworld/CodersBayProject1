@@ -22,7 +22,8 @@
 }
 
 .gallery_pics img{
-    width: 100%;
+    width: 90%;
+    height: auto;
     transition: all 2s ease-in-out;
 }
 .gallery_pics img:hover{
