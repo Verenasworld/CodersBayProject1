@@ -13,20 +13,24 @@ body{
 
 #mylogo{
     position: absolute;
-    left: 50%;
+    left: 45%;
     z-index: 4;
 }
 
 .clock{
     width: 300px;
     height: 300px;
-    background-color: rgba(255,255,255,0.8);
+    background-color: rgba(255,255,255,0.4);
     border-radius: 50%;
     border: 5px solid rgb(53, 119, 140);
     position: relative;
+    transition: 2s ease-in;
 /*    wieso setzte ich das auf relative , es passiert nichts anderes als wenn ich es nicht setzte ?? */
 }
 
+.clock:hover{
+    transform: scale(1.1);
+}
 /*aufgabe setzte die number 1 -12 rundherum um den kreis innen */
 .clock .number{
     --rotation: 0;
@@ -60,7 +64,7 @@ body{
     position: absolute;
     bottom: 50%;
     left: 50%;
-    border: 1px solid white;
+    border: 1px solid #000000;
     /*top zeiger werden damit abgerundet */
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -74,7 +78,7 @@ body{
 .clock::after{
     content: '';
     position: absolute;
-    background-color: #35778c;
+    background-color: #000000;
     z-index: 11;
     width: 15px;
     height: 15px;
