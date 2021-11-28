@@ -1,4 +1,5 @@
 
+/*slideshow*/
 .container_gallery{
     width: 100vw;
     height: auto;
@@ -6,21 +7,28 @@
 .container_gallery .gallery_text{
     text-align: center;
 }
-
 .gallery_pics{
     display: flex;
     align-items: center;
-    justify-content: center;
-    width: 100%;
     min-height: 100vh;
+
 }
+
+/*wie kann ich das in flex usetzten muss ich das in flex machen? ??? */
 .gallery_pic{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-    grid-gap: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-height: 400px;
+    width: 500px;
+    /*display: grid;*/
+    /*grid-template-columns: repeat(auto-fit, minmax(250px,2fr));*/
+    /*grid-gap: 30px;*/
+    animation: scroll 10s linear infinite;
+    animation-direction: reverse;
+
 
 }
-
 .gallery_pics img{
     width: 90%;
     height: auto;
@@ -43,21 +51,97 @@
     background-color: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
 }
-
 .popupcontent{
     width: 80%;
     margin: 15% auto;
     color: black;
 }
 
-.close{
-    color: #35778c;
-    float: right;
-    cursor: pointer;
-    font-size: 40px;
+
+/*todo: infinity loop with keyframe */
+@keyframes scroll {
+    0%{
+        transform: translate(200px);
+    }
+    50%{
+        transform: translate(-550px);
+    }
+    100%{
+       transform: translate(-1500px) ;
+    }
+    0%{
+        transform: translate(200px);
+    }
 }
 
-.close:hover, close:focus{
-    color: black;
-    cursor: pointer;
+
+
+/*//hier spiele ich mich mit keyframes für eine Bilder Gallery */
+.onframe{
+    overflow: hidden;
+    height: 560px;
+}
+#slider{
+    box-sizing: border-box;
+    height: 580px;
+    width: 90%;
+    margin: 40px auto 20px;
+    overflow: hidden;
+    position: relative;
+}
+#slider figure{
+    width: 680px;
+    height: 470px;
+    position: absolute;
+    margin: 0;
+}
+#slider figure img{
+    max-height: 600px;
+}
+#slider .animated1{
+    animation: first 25s linear infinite;
+}
+#slider .animated2{
+    animation: img 25s linear infinite;
+}
+#slider .animated3{
+    animation: third 25s linear infinite;
+}
+
+@keyframes first  {
+    0%{
+        top: 0px;
+        z-index: 2;
+    }
+    10%{
+        top: 0px;
+    }
+
+    50%{
+        top: -470px;
+    }
+    80%{
+        top: -600px;
+    }
+    100%{
+        top: 0;
+        z-index: 0;
+    }
+}
+
+@keyframes img {
+    0%{
+        opacity: 0;
+        top: 0;
+        z-index: 0;
+    }
+    100%{
+        z-index: 1;
+
+    }
+    0%{
+        top: -100px;
+    }
+
+
 }

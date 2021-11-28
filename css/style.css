@@ -1,16 +1,16 @@
 * {
-    margin: 2px;
+    margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 /*basic style*/
 body {
     font-family: Roboto, sans-serif;
-    font-size: 1.1rem;
+    font-size: 15px;
+
     background-image: radial-gradient(#ececec, #8ed7d3, #50abc9, #35778c);
     min-height: 100vh;
-    margin: 0 20px;
+    margin: 0;
 }
 
 button {
@@ -18,13 +18,13 @@ button {
     color: black;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 15px 25px;
-    border-radius: 25px;
+    border-radius: 20px;
+    transition: 1s ease-in-out;
 }
-
 
 button:hover {
     background-color: rgba(255, 255, 255, 0.9);
-
+    transform: scale(1.08);
 }
 
 /*navigation*/
@@ -35,7 +35,8 @@ button:hover {
     position: sticky;
     top: 0;
     background-color: rgba(255, 255, 255, 0.5);
-    z-index: 1;
+    z-index: 999;
+    /*    hab auf der gallery seite index auf Img slider , test deswegen so hoch*/
 }
 
 .nav {
@@ -44,7 +45,7 @@ button:hover {
 }
 
 #mylogo {
-    transition: all 1s ease-in-out;
+    transition: all 1s ease-in;
 }
 
 #mylogo:hover {
@@ -53,26 +54,27 @@ button:hover {
 
 .nav li {
     display: inline-block;
+    /*    wenn ich das weg nehme springt alles für sich wieder in eine reihe */
 }
 
 .nav li a {
     cursor: pointer;
     color: black;
     text-decoration: none;
-    margin: 0 3rem;
-    padding: 1rem;
+    margin: 0 20px;
+    padding: 20px;
 }
 
 .nav li a:hover {
-    background: rgba(0, 0, 0, 0.2);
-    color: white;
-    padding: 1rem;
+    background: rgba(255, 255, 255, 0.5);
+    color: #35778c;
+    padding: 20px;
+    border-radius: 5px;
 }
 
 .nav-burger {
     display: none;
     cursor: pointer;
-
 }
 
 .burger-line {
@@ -82,7 +84,8 @@ button:hover {
     margin-bottom: 5px;
 }
 
-/*erster container mit Text und Bild*/
+/*Mein Bild und Text fade in und positioniere ich alles in die Mitte*/
+/*auf container1 rufe ich die animation auf die ich im Keyframe gesetzt habe  */
 .container1 {
     position: relative;
     display: flex;
@@ -97,7 +100,6 @@ button:hover {
     align-items: center;
     margin: 40px 0;
 }
-
 
 .container1 .content h1 {
     margin-top: 40px;
@@ -119,16 +121,16 @@ button:hover {
     font-size: 20px;
 }
 
-/*Bild style*/
-
+/* MY Bild style Fade in , hier rufe ich die animation nochmals auf -längere animation  */
 #vsart {
     width: 300px;
     height: 300px;
     border-radius: 250px;
-    border: 20px solid rgba(255,255,255,0.4);
-    animation: fadein 5s;
+    border: 20px solid rgba(255, 255, 255, 0.4);
+    animation: fadein 7s ease-in;
 }
 
+/*beim laden der seite ist die opacity 0 und innerhalb von 5 sec wandert opacity auf 1*/
 @keyframes fadein {
     0% {
         opacity: 0;
@@ -138,8 +140,7 @@ button:hover {
     }
 }
 
-/*socialmedia*/
-
+/*socialmedia on hover transform scale*/
 .sozialmedia img {
     width: 40px;
     height: auto;
@@ -152,17 +153,13 @@ button:hover {
 }
 
 /*Interessen , skills */
-
 .skills {
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-top: 100px;
-
-
 }
 
 .skills section {
-
     flex-direction: column;
     justify-content: center;
     text-align: center;
@@ -175,14 +172,13 @@ button:hover {
     height: 20rem;
     transition: 2s ease-in-out;
     box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.45);
-
 }
 
 .skills img:hover {
     transform: scale(0.9);
 }
 
-.skills h2 {
+.skills h2, .contact h2 {
     margin-top: 20px;
     font-family: "Open Sans";
     color: #35778c;
@@ -191,25 +187,52 @@ button:hover {
 .skills p {
     padding: 20px 50px;
 }
+
+/*Kontaktformular*/
+
 .contact {
     margin: 50px 200px;
 }
 
-input{
+.contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 span {
+ background-color: rgba(53, 119, 140, 0.71);
+    color: white !important;
+    padding: 10px;
+}
+
+input {
     width: 100%;
     padding: 15px;
     margin-bottom: 10px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-family: Roboto, sans-serif;
+    border: 1px solid white;
 }
 
-textarea{
+textarea {
+    font-family: Roboto, sans-serif;
     position: relative;
     width: 100%;
     height: 150px;
-    background-color: rgba(255,255,255,0.4);
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 10px 5px;
+    margin: 5px auto;
+    border: 1px solid white;
 
 }
 
+#btn-submit {
+    margin: 20px;
+    color: green;
+}
+
+/*untere Fuszeile */
 .footer {
     height: 40px;
     background-color: rgba(255, 255, 255, 0.4);
@@ -223,7 +246,6 @@ textarea{
 }
 
 /*responsive , für mobile und tablet - navigation und layout*/
-
 @media all and (max-width: 1000px) {
     .header {
         flex-direction: column;
@@ -280,5 +302,9 @@ textarea{
 
     .skills button {
         margin-bottom: 50px;
+    }
+
+    .contact {
+        margin: 20px 0;
     }
 }

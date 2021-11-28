@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<!--header mit logo und navigation-->
 <nav class="header">
     <a href="../html/index.html"><img id="mylogo" src="../assets/vslogo2.gif" alt="logo" width="80px" height="80px"></a>
     <ul class="nav" id="navlist">
@@ -23,6 +24,7 @@
     </div>
 </nav>
 
+<!--mein Bild mit Fade in und kurzem Text-->
 <div class="container1" id="home">
     <div class="content" >
         <img id="vsart" src="../assets/Vs-Art.jpg" alt="women-drawing">
@@ -39,6 +41,7 @@
     </div>
 </div>
 
+<!--meine Skills Bilder Box mit Text -->
 <div class="skills" id="skills">
     <section class="webdesign">
         <img src="../assets/laptop-g3e40af446_1280.png" alt="">
@@ -89,22 +92,25 @@
     </section>
 </div>
 
+<!--kontaktformular -->
 <div id="contact" class="contact">
-    <h2>Ich freu mich auf Deine Nachricht</h2>
-    <input type="text" placeholder="email">
-    <input type="text" placeholder="name">
+    <h2>Ich freu mich auf <span>Deine Nachricht</span></h2>
+    <input type="text" placeholder="example@gmail.com">
+    <input type="text" placeholder="dein name hier">
     <div>
         <textarea name="" id="nachricht" placeholder="Deine Nachricht an mich!"></textarea>
     </div>
-    <button> send email</button>
+    <button  onclick="infobox()"> send email</button>
+    <p id="btn-submit" ></p>
 </div>
 
+<!--fußzeile-->
 <div class="footer">
     <p>&copy VSArt</p>
 </div>
 
 </body>
-<!--//from inline css to externes file to apply function on galerypage-->
+<!--//from inline css to extern file to apply function on galerypage-->
 <script type="text/javascript" src="../main.script.js"></script>
 </html>
 
