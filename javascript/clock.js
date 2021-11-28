@@ -1,5 +1,3 @@
-//wir wollen alle 1000 sekunden einen Interval setzten
-
 setInterval(setClock, 1000);
 
 const hourHand = document.querySelector('[data-hour-hand]');
@@ -11,7 +9,7 @@ function setClock(){
     // console.log(currentDate)
     const secondsRatio = currentDate.getSeconds() / 60;
     const minutesRatio = (secondsRatio + currentDate.getMinutes())/ 60;
-    const hoursRatio = (minutesRatio * currentDate.getHours()) / 60;
+    const hoursRatio = (minutesRatio + currentDate.getHours()) / 12;
     setRotation(secondHand, secondsRatio);
     setRotation(minuteHand, minutesRatio);
     setRotation(hourHand, hoursRatio);
