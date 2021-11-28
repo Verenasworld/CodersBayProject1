@@ -1,0 +1,106 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+    font-family: "Georgia Pro";
+}
+body{
+    background: linear-gradient(to right, hsl(200, 100%, 50%), hsl(175, 100%, 50%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#mylogo{
+    position: absolute;
+    left: 45%;
+    z-index: 4;
+}
+
+.clock{
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 50%;
+    border: 5px solid rgb(53, 119, 140);
+    position: relative;
+    transition: 2s ease-in;
+/*    wieso setzte ich das auf relative , es passiert nichts anderes als wenn ich es nicht setzte ?? */
+}
+
+.clock:hover{
+    transform: scale(1.1);
+}
+/*aufgabe setzte die number 1 -12 rundherum um den kreis innen */
+.clock .number{
+    --rotation: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transform: rotate(var(--rotation));
+    font-size: 1.5rem;
+
+/*    hier bestimme ich das number classe absolute zur clock relative verhalten soll und rundherum rotieren soll beginndend mit poistuion 0 in variable rotation*/
+}
+
+/*zahlen verteilen */
+/*und sage jeder einzelnen Zahl wieviel grad rotieren soll */
+.clock .number1{--rotation: 30deg;}
+.clock .number2{--rotation: 60deg;}
+.clock .number3{--rotation: 90deg;}
+.clock .number4{--rotation: 120deg;}
+.clock .number5{--rotation: 150deg;}
+.clock .number6{--rotation: 180deg;}
+.clock .number7{--rotation: 210deg;}
+.clock .number8{--rotation: 240deg;}
+.clock .number9{--rotation: 270deg;}
+.clock .number10{--rotation: 300deg;}
+.clock .number11{--rotation: 330deg;}
+
+/*zeiger*/
+.clock .hand{
+    --rotation: 0;
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    border: 1px solid #000000;
+    /*top zeiger werden damit abgerundet */
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    transform-origin: bottom;
+    z-index: 10;
+    transform: translateX(-50%) rotate(calc(var(--rotation)* 1deg));
+
+/*    so wie bei den zahlen mit transform origin kann ich ihm noch mitgeben das er zeiger in der mitte bleibt und rundherum rotiert */
+}
+/*set the middle circle with after sudo element and position it absolut in the middle*/
+.clock::after{
+    content: '';
+    position: absolute;
+    background-color: #000000;
+    z-index: 11;
+    width: 15px;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.clock .hand.second{
+    width: 3px;
+    height: 45%;
+    background-color: #000000;
+}
+.clock .hand.minute{
+    width: 7px;
+    height: 40%;
+    background-color: #35778c;
+}
+.clock .hand.hour{
+    width: 10px;
+    height: 35%;
+    background-color: #35778c;
+}
+
