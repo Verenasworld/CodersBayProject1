@@ -1,147 +1,90 @@
 
-/*slideshow*/
-.container_gallery{
-    width: 100vw;
-    height: auto;
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
-.container_gallery .gallery_text{
-    text-align: center;
+body{
+    overflow: hidden;
 }
-.gallery_pics{
-    display: flex;
-    align-items: center;
-    min-height: 100vh;
+
+section{
+    height: 100vh;
 
 }
 
-/*wie kann ich das in flex usetzten muss ich das in flex machen? ??? */
-.gallery_pic{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    max-height: 400px;
-    width: 500px;
-    /*display: grid;*/
-    /*grid-template-columns: repeat(auto-fit, minmax(250px,2fr));*/
-    /*grid-gap: 30px;*/
-    animation: scroll 10s linear infinite;
-    animation-direction: reverse;
-
-
-}
-.gallery_pics img{
-    width: 90%;
-    height: auto;
-    transition: all 2s ease-in-out;
-}
-.gallery_pics img:hover{
-    transform: scale(1.03);
-    filter: blur(5px);
-}
-
-.popup{
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
+.slider-container{
+    position: relative;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
-    overflow: auto;
-    background-color: rgba(255,255,255,0.7);
-    backdrop-filter: blur(10px);
 }
-.popupcontent{
-    width: 80%;
-    margin: 15% auto;
+
+
+.left-slide{
+    height: 95%;
+    width: 35%;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+}
+/*100% width von left-slide width which has 35% from the screen*/
+.left-slide > div{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.left-slide{
+    font-size: 40px;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.right-slide{
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 35%;
+    width: 65%;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+.slider-container .action-Buttons{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    z-index: 100;
+    border: none;
+
+}
+
+.slider-container .action-Buttons button{
+    color: white;
+    width: 80px;
+    height: 100px;
+}
+
+.slider-container .action-Buttons button:hover{
     color: black;
 }
 
-
-/*todo: infinity loop with keyframe */
-@keyframes scroll {
-    0%{
-        transform: translate(200px);
-    }
-    50%{
-        transform: translate(-550px);
-    }
-    100%{
-       transform: translate(-1500px) ;
-    }
-    0%{
-        transform: translate(200px);
-    }
+.slider-container .action-Buttons .down{
+    transform: translateX(100);
 }
 
-
-
-/*//hier spiele ich mich mit keyframes für eine Bilder Gallery */
-.onframe{
-    overflow: hidden;
-    height: 560px;
-}
-#slider{
-    box-sizing: border-box;
-    height: 580px;
-    width: 90%;
-    margin: 40px auto 20px;
-    overflow: hidden;
-    position: relative;
-}
-#slider figure{
-    width: 680px;
-    height: 470px;
-    position: absolute;
-    margin: 0;
-}
-#slider figure img{
-    max-height: 600px;
-}
-#slider .animated1{
-    animation: first 25s linear infinite;
-}
-#slider .animated2{
-    animation: img 25s linear infinite;
-}
-#slider .animated3{
-    animation: third 25s linear infinite;
-}
-
-@keyframes first  {
-    0%{
-        top: 0px;
-        z-index: 2;
-    }
-    10%{
-        top: 0px;
-    }
-
-    50%{
-        top: -470px;
-    }
-    80%{
-        top: -600px;
-    }
-    100%{
-        top: 0;
-        z-index: 0;
-    }
-}
-
-@keyframes img {
-    0%{
-        opacity: 0;
-        top: 0;
-        z-index: 0;
-    }
-    100%{
-        z-index: 1;
-
-    }
-    0%{
-        top: -100px;
-    }
-
-
+.slider-container .action-Buttons .up{
+    transform: translateY(-100%);
 }

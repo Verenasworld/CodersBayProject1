@@ -6,7 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Gallery</title>
     <link rel="stylesheet" href="../css/gallery_slider.css">
+    <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../style.css">
+
 </head>
 <body>
 <nav class="header">
@@ -27,57 +29,51 @@
     </div>
 </nav>
 
-<!--https://swiperjs.com/demos#effect-coverflow-->
-<!--auf der seite gibt es fertige zum einbauen hier dazu das tutorial https://www.youtube.com/watch?v=kw1wnvWjgCw&t=1 ist das hackii?? -->
-<div class="container_gallery">
-    <h1 class="gallery_text">Gallery</h1>
-    <div class="gallery_pics">
-        <div class="gallery_pic">
-            <img data-img1 id="popup1" src="../assets/newHoodie.jpg" alt="Frauen im Pullover">
-            <img data-img2 src="../assets/bigfam.jpg" alt="Familien Digital Zeichnung">
-            <img src="../assets/schickhappens.jpg" alt="mode frauen zeichnung ">
-            <img src="../assets/black&white.png" alt="frauen Körper schwarz-weiß">
-            <img src="../assets/flower.jpg" alt="Blumen zeichnung">
 
+<section>
+    <div class="slider-container">
+        <div class="left-slide">
+           <div class="" style="background-color: #d022dc">
+               <h1>My Family</h1>
+               <p>some text here </p>
+           </div>
+            <div class="" style="background-color: #0e64a2">
+                <h1>Second Image</h1>
+                <p>all in pink</p>
+            </div>
+            <div class="" style="background-color: #35778c">
+                <h1>Third Image</h1>
+                <p>all in pink</p>
+            </div>
+            <div class="" style="background-color: #ececec">
+                <h1>Four Image</h1>
+                <p>all in pink</p>
+            </div>
+        </div>
+
+        <div class="right-slide">
+<!--  placholder unsplash img   -->
+           <div><img src="/assets/bigfam.jpg" alt="" style="width:1200px; height: 1200px"></div>
+           <div><img src="/assets/newHoodie.jpg" alt="" style="width:1200px; height: 1200px"></div>
+           <div><img src="/assets/black&white.png" alt="" style="width:1200px; height: 1200px"></div>
+           <div><img src="/assets/flower.jpg" alt="" style="width:1200px; height: 1200px"></div>
+        </div>
+
+        <div class="action-Buttons">
+            <button class="down">
+                <i class="fas fa-arrow-down"></i>
+            </button>
+            <button class="up">
+                <i class="fas fa-arrow-up"></i>
+            </button>
         </div>
     </div>
-    <div id="myModal" class="popup">
-        <div class="popupcontent">
-            <h2>here wer go</h2>
-            <img src="../assets/laptop-g3e40af446_1280.png" alt="" style="width: 50%">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis delectus fugit numquam
-                tenetur veritatis.</p>
-        </div>
-    </div>
+</section>
 
-    <div id="myModal1" class="popup">
-        <div class="popupcontent">
-            <h2>here wer go2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur debitis delectus fugit numquam
-                tenetur veritatis.</p>
-        </div>
-    </div>
-</div>
-<!--test eine andere form von slide mit Keyframes-->
-<div id="slider">
-    <div class="onframe">
-        <figure class="animated1">
-            <img src="../assets/newHoodie.jpg" alt="">
-            <figcaption class="label">This is so cool</figcaption>
-        </figure>
-        <figure class="animated2">
-            <img src="../assets/bigfam.jpg" alt="">
-        </figure>
-        <!--        <figure class="animated3">-->
-        <!--            <img src="../assets/laptop-g3e40af446_1280.png" alt="">-->
-        <!--        </figure>-->
-    </div>
-</div>
-<div id="stickyf" class="footer">
-    <p>&copy VSArt</p>
-</div>
 
-<script type="text/javascript" src="../main.script.js"></script>
+
+
+<script type="text/javascript" src="/javascript/galery.js"></script>
 
 </body>
 </html>
