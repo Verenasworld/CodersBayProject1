@@ -22,11 +22,12 @@ section{
 
 
 .left-slide{
-    height: 95%;
+    height: 100%;
     width: 35%;
     position: absolute;
     top: 0;
     left: 0;
+    transition: transform .5s ease-in-out;
 
 }
 /*100% width von left-slide width which has 35% from the screen*/
@@ -52,6 +53,7 @@ section{
     top: 0;
     left: 35%;
     width: 65%;
+    transition: transform .5s ease-in-out;
 }
 
 .right-slide > div {
